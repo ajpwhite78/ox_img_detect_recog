@@ -10,7 +10,7 @@ frame_window = st.empty()
 
 while True:
     # Read a frame from the camera as a PIL Image
-    frame = frame_window.camera_input(label="", label_visibility="collapsed")
+    frame = frame_window.camera_input()
 
     # Process the frame
     processed_frame = process_frame(frame)
