@@ -1,3 +1,13 @@
-from streamlit_webrtc import webrtc_streamer, RTCConfiguration 
+from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration 
 
-webrtc_streamer(key="sample", rtc_configuration=RTCConfiguration({"iceServers": [{"urls": ["stun:stun-eu.3cx.com:3478"]}]}))
+RTC_CONFIGURATION = RTCConfiguration(
+    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+)
+
+webrtc_ctx = webrtc_streamer(
+    key="WYH",
+    mode=WebRtcMode.SENDRECV,
+    rtc_configuration=RTC_CONFIGURATION,
+    media_stream_constraints={"video": True, "audio": False},
+    async_processing=False,
+)
