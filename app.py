@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image, ImageColor
 from io import BytesIO
 import streamlit as st
+from streamlit_webrtc import webrtc_streamer
 
 # Hide the footer and header
 hide_st_style = """
