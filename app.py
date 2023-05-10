@@ -52,7 +52,7 @@ with col2:
 # Initialize the camera object and get its width and height
 width = 600
 height = 400
-
+webrtc_streamer(key="example")
 # Create a blank image with the same dimensions as the camera feed
 blank_image = np.zeros((height, width, 3), dtype=np.uint8)
 resized_blank_image = cv2.resize(blank_image, (600, int((height/width)*600)))
