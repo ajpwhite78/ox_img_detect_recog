@@ -1,3 +1,3 @@
-from streamlit_webrtc import webrtc_streamer, RTCConfiguration
+from streamlit_webrtc import webrtc_streamer, RTCConfiguration 
 
 webrtc_streamer(key="sample", rtc_configuration=RTCConfiguration({"iceServers": [{"urls": ["stun:stun-eu.3cx.com:3478"]}]}))
