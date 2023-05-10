@@ -13,10 +13,10 @@ while True:
     frame = frame_window.camera_input(label="", label_visibility="collapsed")
 
     # Process the frame
-    processed_frame = process_frame(frame)
+ #   processed_frame = process_frame(frame)
 
     # Show the processed frame in the Streamlit app
-    frame_window.image(processed_frame)
+    frame_window.image(frame)
 
     # Wait for a short time before processing the next frame
     time.sleep(0.1)
