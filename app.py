@@ -6,11 +6,11 @@ def process_frame(frame):
     processed_frame = frame  # Replace with your actual processing code
     return processed_frame
 
-frame_window = st.empty() 
+frame_window = st.empty()
 
 while True:
     # Read a frame from the camera as a PIL Image
-    frame = frame_window.camera_input()
+    frame = frame_window.camera_input(label="", label_visibility="collapsed")
 
     # Process the frame
     processed_frame = process_frame(frame)
