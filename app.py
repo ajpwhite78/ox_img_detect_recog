@@ -4,7 +4,6 @@ import numpy as np
 from PIL import Image, ImageColor
 from io import BytesIO
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 
 # Hide the footer and header
 hide_st_style = """
@@ -53,7 +52,7 @@ with col2:
 # Initialize the camera object and get its width and height
 width = 600
 height = 400
-webrtc_streamer(key="key", rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
+
 # Create a blank image with the same dimensions as the camera feed
 blank_image = np.zeros((height, width, 3), dtype=np.uint8)
 resized_blank_image = cv2.resize(blank_image, (600, int((height/width)*600)))
