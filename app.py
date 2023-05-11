@@ -7,8 +7,6 @@ RTC_CONFIGURATION = RTCConfiguration(
 webrtc_ctx = webrtc_streamer(
     key="WYH",
     video_frame_callback=callback,
-    mode=WebRtcMode.SENDRECV,
     rtc_configuration=RTC_CONFIGURATION,
     media_stream_constraints={"video": True, "audio": False},
-    async_processing=False,
 )
